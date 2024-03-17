@@ -21,7 +21,11 @@ $(".Button").on("click", function (e) {
   } else if (e.target.innerHTML == "AC") {
     string = "";
     document.querySelector("input").value = string;
-  } else {
+  }else if(e.target.innerHTML == "√"){
+    string = Math.sqrt(string);
+    document.querySelector("input").value = string;
+  } 
+  else {
     string = string + e.target.innerHTML;
     document.querySelector("input").value = string;
   }
